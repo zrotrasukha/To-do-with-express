@@ -8,11 +8,13 @@ This is a to do project with uses a json file to manage tasks, through it I am l
 2. Install nodemon with `npm i nodemon`, it will help us watching changes in file, if made any.
 3. Use any web server interaction tool, like httpie, curl or Postman! (You do not have to use it right away).
 4. Initiate the `index.js` file with `nodemon index.js`.
-5. Add suffix the local host link, like `http://localhost:3000/`. The available suffix are these:
+5. Add suffix to the local host link, like `http://localhost:3000/`. The available suffix are these:
 - `/post` ; Method: `POST`
 - `/update` ; Method: `PUT`
 - `/getTask` ; Method: `GET`
 - `/delete` ; Method: `DELETE`
+> [!NOTE]
+> Now finally test using postman or httpie or curl. 
 
 ---
 
