@@ -2,7 +2,6 @@ const { json } = require("body-parser");
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const path = require("path");
 const tasksFile = "./tasks.json";
 
 // Middleware to parse JSON request body
@@ -122,6 +121,15 @@ app.delete("/deleteTask", (req, res) => {
   });
 });
 
+app.delete("/deleteAll" , (req, res)=> { 
+  fs.writeFile(tasksFile, "{}", ( err ) => { 
+    if(err){
+      console.log(`Error writing the file ${err}`); 
+      res.status(500).send("Error writing the file");
+    }
+    res.status(204).send("All files were deleted"); 
+  })
+})
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
