@@ -18,22 +18,28 @@ This is a to do project with uses a json file to manage tasks, through it I am l
 
 )
 
-- `/getTask` ; Method: `GET` (Gives you all the task that are restored)
-- `/update` ; Method: `PUT`
+- `/getTask` ; Method: `GET` (Gives you all the task that are stored in `tasks.json` file.)
+
+- `/update` ; Method: `PUT` (It updates a specific task that you want to update, you may want to use the `json` request body similar to this: 
 
 ```json
-"id": "< find the ID by get method >", 
-"task": "<Text you want to overwrite>";
-```
-
-- `/delete` ; Method: `DELETE` (it also requires a body to delete, you may write the id of the task you want to delete and again you can know the id of your task with `/getTask`: 
-```json
-{
-  "id": 1, 
-}
+  "id": "find the ID by get method",
+  "task": "Text you want to overwrite";
 ```
 )
-- `/deleteAll`; Method: DELETE (It deletes all the data at once)
+
+- `/delete` ; Method: `DELETE` (it also requires a body to delete, you may write the id of the task you want to delete and again you can know the id of your task with `/getTask`:
+
+```json
+{
+  "id": 1
+}
+```
+
+)
+
+- `/deleteAll`; Method: DELETE (It deletes all the data at once, do it carefully, if your maa told you to buy some groceries and you were stupid enough to write it here)
+
   > [!NOTE]
   > Now finally test using postman or httpie or curl.
 
